@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хорошие добрые ангелочки 👼🏻</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👼🏻</text></svg>">
+</head>
+<body>
+    <!-- Облака сверху -->
+    <div class="clouds-top">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+    </div>
+
+    <!-- Милое меню -->
+    <nav class="cute-menu">
+        <a href="#about" class="menu-item">
+            <span class="menu-icon">🌸</span>
+            О нашем сообществе
+        </a>
+    </nav>
+
+    <!-- Цветочки по углам -->
+    <div class="corner-flower flower-tl">🌸</div>
+    <div class="corner-flower flower-tr">🌺</div>
+    <div class="corner-flower flower-bl">🌷</div>
+    <div class="corner-flower flower-br">💮</div>
+
+    <!-- Перышки снизу -->
+    <div class="feathers-bottom">
+        <div class="feather feather-1">𓆸</div>
+        <div class="feather feather-2">𓆸</div>
+        <div class="feather feather-3">𓆸</div>
+        <div class="feather feather-4">𓆸</div>
+        <div class="feather feather-5">𓆸</div>
+        <div class="feather feather-6">𓆸</div>
+    </div>
+
+    <!-- Мягкие звездочки -->
+    <div class="star-decoration" style="top: 30%; left: 15%;">✦</div>
+    <div class="star-decoration" style="top: 40%; right: 20%; animation-delay: 1s;">✧</div>
+    <div class="star-decoration" style="top: 70%; left: 25%; animation-delay: 2s;">✦</div>
+    <div class="star-decoration" style="top: 60%; right: 15%; animation-delay: 1.5s;">✧</div>
+
+    <div class="container">
+        <h1>Хорошие добрые ангелочки 👼🏻</h1>
+        <p class="subtitle">Добро пожаловать в наше светлое и уютное сообщество, где царит доброта, поддержка и вдохновение</p>
+        
+        <a href="https://t.me/+w4gsC6S32nNkZDU6" target="_blank" class="telegram-button">
+            <span class="icon">💌</span> Присоединиться в Telegram
+        </a>
+        
+        <p class="footer-note">
+            Нажмите на кнопку выше, чтобы перейти в наш телеграм-канал. Это простая ссылка, которая откроется прямо в приложении Telegram на вашем устройстве. Там вас уже ждут!
+        </p>
+    </div>
+
+    <!-- Секция "О нас" -->
+    <section id="about" class="about-section">
+        <h2 class="about-title">О нашем уютном сообществе</h2>
+        
+        <p class="about-text">
+            Мы создали это пространство для тех, кто верит в силу доброты и хочет делиться теплом с окружающими. 
+            Здесь нет места негативу — только поддержка, вдохновение и искреннее общение.
+        </p>
+        
+        <p class="about-text">
+            Каждый день мы делимся добрыми историями, вдохновляющими цитатами и создаем атмосферу, 
+            в которой хочется возвращаться снова и снова. Присоединяйтесь к нашей дружной семье ангелочков!
+        </p>
+        
+        <div class="about-features">
+            <div class="feature">
+                <span class="feature-icon">🤗</span>
+                <div class="feature-text">Поддержка</div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">✨</span>
+                <div class="feature-text">Вдохновение</div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">💝</span>
+                <div class="feature-text">Доброта</div>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">👼</span>
+                <div class="feature-text">Ангельская атмосфера</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Небольшой скрипт для улучшения взаимодействия -->
+    <script>
+        // Добавляем эффект нажатия на кнопку
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.querySelector('.telegram-button');
+            
+            button.addEventListener('mousedown', function() {
+                this.style.transform = 'translateY(-5px) scale(0.98)';
+            });
+            
+            button.addEventListener('mouseup', function() {
+                this.style.transform = 'translateY(-10px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+            
+            // Добавляем случайные вращения для перышек
+            const feathers = document.querySelectorAll('.feather');
+            feathers.forEach((feather, index) => {
+                const rotation = Math.random() * 40 - 20; // случайное вращение от -20 до 20 градусов
+                feather.style.setProperty('--rotation', `${rotation}deg`);
+            });
+            
+            // Добавляем эффект цветочков при наведении на меню
+            const menuItem = document.querySelector('.menu-item');
+            menuItem.addEventListener('mouseenter', function(e) {
+                // Создаем несколько цветочков
+                for (let i = 0; i < 5; i++) {
+                    setTimeout(() => {
+                        const flower = document.createElement('div');
+                        flower.className = 'menu-decoration';
+                        flower.innerHTML = '🌸';
+                        flower.style.left = (e.clientX + Math.random() * 40 - 20) + 'px';
+                        flower.style.top = (e.clientY + Math.random() * 40 - 20) + 'px';
+                        flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                        document.body.appendChild(flower);
+                        
+                        // Анимация цветочка
+                        setTimeout(() => {
+                            flower.style.transition = 'all 1s ease';
+                            flower.style.opacity = '1';
+                            flower.style.transform = `translateY(-${Math.random() * 80 + 40}px) translateX(${Math.random() * 60 - 30}px) rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.5 + 0.5})`;
+                            
+                            setTimeout(() => {
+                                flower.style.opacity = '0';
+                                flower.style.transform = `translateY(-${Math.random() * 100 + 60}px) translateX(${Math.random() * 80 - 40}px) rotate(${Math.random() * 720}deg) scale(0.2)`;
+                                
+                                setTimeout(() => {
+                                    if (flower.parentNode) {
+                                        flower.parentNode.removeChild(flower);
+                                    }
+                                }, 1000);
+                            }, 500);
+                        }, 10);
+                    }, i * 100);
+                }
+            });
+            
+            // Плавная прокрутка к секции "О нас"
+            const aboutLink = document.querySelector('a[href="#about"]');
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const aboutSection = document.getElementById('about');
+                aboutSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
